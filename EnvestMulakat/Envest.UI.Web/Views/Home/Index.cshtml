@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Envest.Model.Satis>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div style="margin-top:3%;margin-bottom:2%">
+    @Html.ActionLink("Komponent Yönetimi", "Index", "Komponent",null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Pano Yönetimi", "Komponent", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Satış İşlemi", "Komponent", null, new { @class = "btn btn-info" })
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Müşteri")
+        </th>
+        <th>
+            @Html.DisplayName("Pano")
+        </th>
+        <th>
+            @Html.DisplayName("Tarih")
+        <th>
+            @Html.DisplayName("Adet")
+        </th>
+        <th>
+            @Html.DisplayName("Satış Birim Fiyatı")
+        </th>
+        <th>
+            @Html.DisplayName("İndirim Oranı")
+        </th>
+        <th>
+            @Html.DisplayName("Toplam Tutar")
+        </th>
+        <th>
+            @Html.DisplayName("Toplam Satış Tutarı")
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Musteri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pano.PanoAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirimFiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndirimOrani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToplamTutar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToplamSatisTutari)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

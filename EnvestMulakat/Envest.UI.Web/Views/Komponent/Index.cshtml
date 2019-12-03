@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Envest.Model.Komponent>
+
+@{
+    ViewBag.Title = "Komponent Yönetimi";
+}
+
+
+<p style="margin-top:3%;margin-bottom:2%">
+    @Html.ActionLink("Komponent Oluştur", "Create",null,new { @class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Bileşen Adı")
+        </th>
+        <th>
+            @Html.DisplayName("Stok")
+        </th>
+        <th>
+            @Html.DisplayName("Fiyat")
+        </th>
+        <th>
+            @Html.DisplayName("Para Birimi")
+        </th>
+        <th>
+            @Html.DisplayName("Oluşturulma Tarihi")
+        </th>
+        <th>
+            @Html.DisplayName("Güncellenme Tarihi")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BilesenAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", null,new { /* id=item.PrimaryKey */ @class="btn btn-success"})
+            @Html.ActionLink("Sil", "Delete", null,new { /* id=item.PrimaryKey */ @class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>

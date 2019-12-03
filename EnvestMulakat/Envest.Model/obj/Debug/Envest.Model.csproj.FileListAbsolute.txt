@@ -1,0 +1,6 @@
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\bin\Debug\Envest.Model.dll
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\bin\Debug\Envest.Model.pdb
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\obj\Debug\Envest.Model.csprojResolveAssemblyReference.cache
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\obj\Debug\Envest.Model.csproj.CoreCompileInputs.cache
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\obj\Debug\Envest.Model.dll
+C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.Model\obj\Debug\Envest.Model.pdb
