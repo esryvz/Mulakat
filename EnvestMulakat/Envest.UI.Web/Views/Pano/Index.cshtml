@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Envest.Model.Pano>
+
+@{
+    ViewBag.Title = "Pano Yönetimi";
+}
+
+
+
+<p style="margin-top:3%;margin-bottom:2%">
+    @Html.ActionLink("Pano Oluştur", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Pano Adı")
+        </th>
+        <th>
+            @Html.DisplayName("Kâr Marjı")
+        </th>
+        <th>
+            @Html.DisplayName("Toplam Maliyet")
+        </th>
+        <th>
+            @Html.DisplayName("Oluşturulma Tarihi")
+        </th>        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PanoAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maliyet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>      
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.PanoID },new { @class="btn btn-success"}) 
+            @Html.ActionLink("Komponentleri Gör", "Index","PanoKomponent", new { id=item.PanoID }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Sil", "Delete", new { id=item.PanoID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Geri", "Index", "Home", null, new { @class = "btn btn-default" })
+</p>

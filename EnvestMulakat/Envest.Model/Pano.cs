@@ -11,6 +11,7 @@ namespace Envest.Model
         public int PanoID { get; set; }
         public string PanoAdi { get; set; }
         public int Kar { get; set; }
-        public decimal Maliyet { get; set; }
+        public decimal Maliyet { get; set; } = 0;
+       
     }
 }

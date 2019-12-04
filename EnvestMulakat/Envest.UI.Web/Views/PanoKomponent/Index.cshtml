@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Envest.Model.PanoKomponent>
+
+@{
+    var dataModel = new Envest.Model.PanoKomponent();
+    int panoID = ViewBag.PanoID;
+    ViewBag.Title = "Index";
+
+}
+
+<p>
+    <a href="#" id="addComp" class="btn btn-primary" style="margin-top:5%;">Komponent Ekle</a>
+</p>
+
+<form id="Components" method="Post" action="/PanoKomponent/Create" style="margin-top:5%;">
+    <div class="form-group" style="margin-bottom:5% !important; border:1px solid lightgrey;border-radius:15px;height:55px;padding-top:10px;width:693px">
+        @Html.Hidden("PanoID",panoID)
+        @Html.Label("Bileşen:", htmlAttributes: new { @class = "control-label col-md-1" })
+        <div class="col-md-3">
+            @Html.DropDownList("KomponentID", (IEnumerable<SelectListItem>)ViewBag.Komponent, "Seçiniz..", new { @class = "form-control" })
+
+        </div>
+        @Html.Label("Adet:", htmlAttributes: new { @class = "control-label col-md-1" })
+        <div class="col-md-3">
+            @Html.Editor("Adet", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => dataModel.Adet, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-2">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2">
+            <input type="button" value="İptal" class="btn btn-default" id="cancel" />
+        </div>
+    </div>
+</form>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Komponent.BilesenAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adet)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Komponent.BilesenAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adet)
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "Delete", new { id = item.PanoKomponentID, PanoID=item.PanoID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    @Html.ActionLink("Geri", "Index", "Pano", null, new { @class = "btn btn-default" })
+</p>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#Components").hide();
+    });
+
+    $("#addComp").on("click", function () {
+        $("#Components").show();
+    });
+    $("#cancel").on("click", function () {
+        $("#Components").hide();
+    });
+
+</script>
+

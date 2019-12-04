@@ -24,14 +24,7 @@ namespace Envest.BLL
 
         public int CreateComponent(Komponent data)
         {
-            Komponent kom = repoKomponent.Find(x => x.KomponentID == data.KomponentID);
-            if (kom != null)
-            {
-                throw new Exception("Bu Komponent Daha Önceden Eklenmiş");
-            }
-            else
-            {
-                var result = repoKomponent.Insert(new Komponent()
+             var result = repoKomponent.Insert(new Komponent()
                 {
                     BilesenAdi = data.BilesenAdi,
                     Stok = data.Stok,
@@ -40,7 +33,7 @@ namespace Envest.BLL
                 });
 
                 return result;
-            }
+            
         }
 
         public int UpdateComponent(Komponent data)

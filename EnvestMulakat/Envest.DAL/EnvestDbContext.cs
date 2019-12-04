@@ -26,6 +26,7 @@ namespace Envest.DAL
         public DbSet<Pano> Pano { get; set; }
         public DbSet<Satis> Satis { get; set; }
         public DbSet<PanoKomponent> PanoKomponent { get; set; }
+        public DbSet<Kur> Kur { get; set; }
 
     }
 }

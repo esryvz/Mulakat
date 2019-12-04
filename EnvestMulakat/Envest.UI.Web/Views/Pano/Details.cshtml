@@ -1,0 +1,58 @@
+﻿@model Envest.Model.Pano
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pano</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PanoAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PanoAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maliyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maliyet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PanoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

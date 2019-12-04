@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KomponentManager.cs" />
+    <Compile Include="PanoKomponentManager.cs" />
+    <Compile Include="PanoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SatisManager.cs" />
   </ItemGroup>

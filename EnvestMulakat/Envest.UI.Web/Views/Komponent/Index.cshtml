@@ -52,10 +52,14 @@
             @Html.DisplayFor(modelItem => item.UpdatedDate)
         </td>
         <td>
-            @Html.ActionLink("Düzenle", "Edit", null,new { /* id=item.PrimaryKey */ @class="btn btn-success"})
-            @Html.ActionLink("Sil", "Delete", null,new { /* id=item.PrimaryKey */ @class="btn btn-danger"})
+            @Html.ActionLink("Düzenle", "Edit", null,new { id=item.KomponentID  },new { @class = "btn btn-success" })
+            @Html.ActionLink("Sil", "Delete", null, new { id = item.KomponentID }, new { @class="btn btn-danger"})
         </td>
     </tr>
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("Geri", "Index", "Home", null, new { @class = "btn btn-default" })
+</p>

@@ -6,8 +6,8 @@
 
 <div style="margin-top:3%;margin-bottom:2%">
     @Html.ActionLink("Komponent Yönetimi", "Index", "Komponent",null, new { @class = "btn btn-info" })
-    @Html.ActionLink("Pano Yönetimi", "Komponent", null, new { @class = "btn btn-info" })
-    @Html.ActionLink("Satış İşlemi", "Komponent", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Pano Yönetimi","Index", "Pano", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Satış İşlemi", "Create","Satis", null, new { @class = "btn btn-info" })
 </div>
 
 <table class="table">
@@ -36,7 +36,6 @@
             @Html.DisplayName("Toplam Satış Tutarı")
         </th>
 
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -64,12 +63,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ToplamSatisTutari)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
+        </td>        
     </tr>
 }
 

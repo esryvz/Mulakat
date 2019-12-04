@@ -17,5 +17,21 @@ namespace Envest.BLL
         {
             return repoSatis.ListQueryable().Include("Pano").ToList();
         }
+
+        public int Create(Satis data)
+        {
+            var result = repoSatis.Insert(new Satis()
+            {
+                Musteri = data.Musteri,
+                PanoID = data.PanoID,
+                Adet = data.Adet,
+                BirimFiyat = data.BirimFiyat,
+                IndirimOrani = data.IndirimOrani,
+                ToplamTutar = data.ToplamTutar,
+                ToplamSatisTutari =data.ToplamSatisTutari
+
+            });
+            return result;
+        }
     }
 }

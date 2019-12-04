@@ -12,3 +12,17 @@ C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.DAL\bin\Debug\EntityFramewor
 C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.csproj.CopyComplete
 C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.dll
 C:\Users\Esra\Documents\GitHub\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.pdb
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\Envest.DAL.dll.config
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\Envest.DAL.dll
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\Envest.DAL.pdb
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\Envest.Model.dll
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\Envest.Model.pdb
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.csproj.CopyComplete
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.dll
+C:\Users\Esra\Documents\GitHub\Mulakat\EnvestMulakat\Envest.DAL\obj\Debug\Envest.DAL.pdb
