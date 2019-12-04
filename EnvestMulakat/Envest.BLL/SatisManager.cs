@@ -12,6 +12,9 @@ namespace Envest.BLL
     public class SatisManager
     {
         Repository<Satis> repoSatis = new Repository<Satis>();
+        Repository<Komponent> repoKomp = new Repository<Komponent>();
+        Repository<PanoKomponent> repoPanoKomp = new Repository<PanoKomponent>();
+        KomponentManager komponentManager = new KomponentManager();
 
         public List<Satis> GetAll()
         {
@@ -20,6 +23,23 @@ namespace Envest.BLL
 
         public int Create(Satis data)
         {
+            var komponentler = repoPanoKomp.ListQueryable().Include("Komponent").Where(x => x.PanoID == data.PanoID).ToList();         
+            foreach (var item in komponentler)
+            {
+                if (item.Komponent.Stok == 0 || item.Komponent.Stok < data.Adet)
+                {                    
+                    return 0;
+                }
+                else
+                {
+                    item.Komponent.Stok -= data.Adet;
+                    
+                }                
+            }
+            foreach (var item in komponentler)
+            {
+                komponentManager.UpdateComponent(item.Komponent);
+            }
             var result = repoSatis.Insert(new Satis()
             {
                 Musteri = data.Musteri,
