@@ -40,9 +40,13 @@
             //context.PanoKomponent.Add(new PanoKomponent() { PanoID = 2, KomponentID = 7, Adet = 2 });
             //context.PanoKomponent.Add(new PanoKomponent() { PanoID = 2, KomponentID = 8, Adet = 1 });
 
-            //context.Satis.Add(new Satis() { Musteri = "Temsu Ltd.",PanoID=1,Adet=2,BirimFiyat=2596.8m,IndirimOrani=0, ToplamTutar=5193.6m,ToplamSatisTutari=5193.6m});
+            //context.Satis.Add(new Satis() { Musteri = "Temsu Ltd.", PanoID = 1, Adet = 2, BirimFiyat = 2596.8m, IndirimOrani = 0, ToplamTutar = 5193.6m, ToplamSatisTutari = 5193.6m });
             //context.Satis.Add(new Satis() { Musteri = "Agaranti Ltd.", PanoID = 1, Adet = 1, BirimFiyat = 2596.8m, IndirimOrani = 0, ToplamTutar = 2596.8m, ToplamSatisTutari = 5193.6m });
             //context.Satis.Add(new Satis() { Musteri = "Agaranti Ltd.", PanoID = 2, Adet = 3, BirimFiyat = 4740.3m, IndirimOrani = 5, ToplamTutar = 14220.9m, ToplamSatisTutari = 13509.9m });
+
+            //context.Kur.Add(new Kur() { Birim = "TRY", Deger = 1 });
+            //context.Kur.Add(new Kur() { Birim = "USD", Deger = 5.75m });
+            //context.Kur.Add(new Kur() { Birim = "EUR", Deger = 6.37m });
 
             //context.SaveChanges();
         }
